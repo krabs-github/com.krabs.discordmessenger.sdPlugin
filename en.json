@@ -1,0 +1,8 @@
+{
+  "Description": "Discord Messenger",
+  "Name": "Discord Messenger",
+  "com.krabs.discordmessenger.action": {
+    "Name": "Discord Messenger",
+    "Tooltip": "Discord Messenger"
+  }
+}

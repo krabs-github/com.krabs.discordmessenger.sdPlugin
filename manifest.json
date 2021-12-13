@@ -1,0 +1,92 @@
+{
+    "Actions": [
+        {
+            "Icon": "resources/images/simple_actionIcon",
+            "Name": "Discord Messenger - Simple Message",
+            "States": [
+                {
+                  "Image": "resources/images/simple_Icon",
+                  "TitleAlignment": "center",
+                  "FontFamily": "Arial",
+                  "TitleColor": "#ffffff",
+                  "FontStyle": "Bold",
+                  "FontSize": "9"
+                }
+              ],
+            "SupportedInMultiActions": false,
+            "Tooltip": "Discord Messenger - Simple Message",
+            "PropertyInspectorPath": "discordmessengerSimple_pi.html",
+            "UUID": "com.krabs.discordmessenger.simple"
+        },
+        {
+            "Icon": "resources/images/custom_actionIcon",
+            "Name": "Discord Messenger - Custom Embed",
+            "States": [
+                {
+                  "Image": "resources/images/custom_Icon",
+                  "TitleAlignment": "center",
+                  "FontFamily": "Arial",
+                  "TitleColor": "#ffffff",
+                  "FontStyle": "Bold",
+                  "FontSize": "9"
+                }
+              ],
+            "SupportedInMultiActions": false,
+            "Tooltip": "Discord Messenger - Custom Embed",
+            "PropertyInspectorPath": "discordmessengerCustomEmbed_pi.html",
+            "UUID": "com.krabs.discordmessenger.custom"
+        },
+        {
+            "Icon": "resources/images/twitch_actionIcon",
+            "Name": "Discord Messenger - Twitch Now Streaming",
+            "States": [
+                {
+                  "Image": "resources/images/twitch_Icon",
+                  "TitleAlignment": "center",
+                  "FontFamily": "Arial",
+                  "TitleColor": "#ffffff",
+                  "FontStyle": "Bold",
+                  "FontSize": "9"
+                }
+              ],
+            "SupportedInMultiActions": false,
+            "Tooltip": "Discord Messenger - Twitch Now Streaming",
+            "PropertyInspectorPath": "discordmessengerTwitch_pi.html",
+            "UUID": "com.krabs.discordmessenger.twitch"
+        },
+        {
+            "Icon": "resources/images/youtube_actionIcon",
+            "Name": "Discord Messenger - YouTube Video",
+            "States": [
+                {
+                  "Image": "resources/images/youtube_Icon",
+                  "TitleAlignment": "center",
+                  "FontFamily": "Arial",
+                  "TitleColor": "#ffffff",
+                  "FontStyle": "Bold",
+                  "FontSize": "9"
+                }
+              ],
+            "SupportedInMultiActions": false,
+            "Tooltip": "Discord Messenger - YouTube Video",
+            "PropertyInspectorPath": "discordmessengerYouTube_pi.html",
+            "UUID": "com.krabs.discordmessenger.youtube"
+        }
+    ],
+
+    "SDKVersion": 2,
+    "Author": "Krabs",
+    "Category": "Krabs - Stream Deck Labs",
+    "CategoryIcon": "resources/images/categoryIcon",
+    "CodePath": "discordmessenger.html",
+    "Description": "Discord Messenger",
+    "Name": "Discord Messenger",
+    "Icon": "resources/images/pluginIcon",
+    "URL": "https://www.krabs.me/streamdeck-plugins",
+    "Version": "1.0.10",
+    "OS": [
+        { "Platform": "windows", "MinimumVersion": "10" },
+        { "Platform": "mac", "MinimumVersion": "10.11" }
+    ],
+    "Software": { "MinimumVersion": "5.0" }
+}

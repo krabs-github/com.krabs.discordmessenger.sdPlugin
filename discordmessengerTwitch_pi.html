@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+        <meta name=apple-mobile-web-app-capable content=yes>
+        <meta name=apple-mobile-web-app-status-bar-style content=black>
+        <title>Discord Messenger - Twitch Now Streaming</title>
+        <link rel="stylesheet" href="resources/css/sdpi.css">
+    </head>
+    <body>
+        <div class="sdpi-wrapper">
+            <div class="sdpi-heading">Configuration</div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Webhook</div>
+               <input id="vKrabs_DiscordWebHook" class="sdpi-item-value" type="text"
+                  placeholder="Enter your Discord Webhook URL" value="" required />
+            </div>
+            <div class="sdpi-heading">Posting User Information</div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Name of Posting User</div>
+               <input id="vKrabs_UserName" class="sdpi-item-value" type="text"
+                  placeholder="Name of Posting User" value="" required />
+            </div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Avatar URL for Posting User</div>
+               <input id="vKrabs_AvatarUrl" class="sdpi-item-value" type="text"
+                  placeholder="Avatar for Posting User" value="" required />
+            </div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Embeded Post Side Bar Color</div>
+               <input id="vKrabs_Embed_SideBarColor" class="sdpi-item-value" type="text"
+                  placeholder="15806497" value="15806497" required />
+            </div>
+            <div class="sdpi-heading">Stream Information</div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Twitch Channel Name</div>
+               <input id="vKrabs_ChannelName" class="sdpi-item-value" type="text"
+                  placeholder="Twitch Channel Name" value="" required />
+            </div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Stream Topic/Game (max. 40 chars)</div>
+               <input id="vKrabs_StreamTopic" class="sdpi-item-value" type="text"
+                  placeholder="Stream Topic (max. 40 chars)" value="" maxlength="40" required />
+            </div>
+
+        </div>
+
+        <div class="sdpi-info-label hidden" style="top: -1000;" value=""></div>
+        <script src="resources/scripts/common.js"></script>
+        <script src="resources/scripts/common_pi.js"></script>
+        <script src="resources/scripts/index_pi.js"></script>
+    </body>
+    </html>
