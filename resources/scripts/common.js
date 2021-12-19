@@ -480,8 +480,8 @@ Utils.getDataUri = function (url, callback, inCanvas, inFillcolor) {
         ctx.miterLimit=4;
         ctx.font="15px / 21.4286px ''";
         ctx.font="   15px ''";
-        ctx.translate(0,5.158536585365853);
-        ctx.scale(0.10975609756097561,0.10975609756097561);
+        ctx.translate(-6,0);
+        ctx.scale(0.14634146341463414,0.14634146341463414);
         ctx.save();
         ctx.restore();
         ctx.save();

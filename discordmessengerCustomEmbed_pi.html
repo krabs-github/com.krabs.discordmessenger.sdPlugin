@@ -39,14 +39,12 @@
                 </div>
             </div>
 
-            <div type="checkbox" class="sdpi-item" id="single-check">
-                <div class="sdpi-item-label">Text to Speech</div>
-                <div class="sdpi-item-value">
-                    <div class="sdpi-item-child">
-                        <input id="vKrabs_TTS" type="checkbox" value="true">
-                        <label for="vKrabs_TTS" class="sdpi-item-label"><span></span>On</label>
-                    </div>
-                </div>
+            <div class="sdpi-item" id="vKrabs_TTS">
+                 <div class="sdpi-item-label">Text to Speech</div>
+                 <select class="sdpi-item-value select">
+                    <option value="false">Off</option>
+                    <option value="true">On</option>
+                 </select>
             </div>
 
             <div class="sdpi-heading">Embed Author Information</div>
@@ -69,47 +67,47 @@
                   required />
             </div>
 
-            <div class="sdpi-heading">Embeded Post Settings</div>
+            <div class="sdpi-heading">Embedded Post Settings</div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Embeded Post Side Bar Color</div>
+               <div class="sdpi-item-label">Embedded Post Side Bar Color</div>
                <input id="vKrabs_Embed_SideBarColor" class="sdpi-item-value" type="text"
                   placeholder="15806497" value="15806497" required />
             </div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Embeded Post Thumnail URL</div>
+               <div class="sdpi-item-label">Embedded Post Thumbnail URL</div>
                <input id="vKrabs_Embed_Thumbnail" class="sdpi-item-value" type="text"
                   placeholder="http://<yourimageurl>/<imagename>(.png or.jpg)" value=""
                   required />
             </div>
 
-            <div class="sdpi-heading">Embeded Post Title Content</div>
+            <div class="sdpi-heading">Embedded Post Title Content</div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Embeded Post Title</div>
+               <div class="sdpi-item-label">Embedded Post Title</div>
                <input id="vKrabs_Embed_Title" class="sdpi-item-value" type="text"
-                  placeholder="Embeded Post Title" value=""
+                  placeholder="Embedded Post Title" value=""
                   required />
             </div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Embeded Post Title Link</div>
+               <div class="sdpi-item-label">Embedded Post Title Link</div>
                <input id="vKrabs_Embed_TitleURL" class="sdpi-item-value" type="text"
                   placeholder="http://<yoururl>" value=""
                   required />
             </div>
             <div type="textarea" class="sdpi-item">
-                <div class="sdpi-item-label up20">Embeded Post Title Description</div>
+                <div class="sdpi-item-label up20">Embedded Post Title Description</div>
                 <div class="sdpi-item-value textarea">
                   <textarea type="textarea" maxlength="2000" id="vKrabs_Embed_TitleDescription" class="three-lines"></textarea>
                 </div>
             </div>
-            <div class="sdpi-heading">Embeded Post Content Main Area</div>
+            <div class="sdpi-heading">Embedded Post Content Main Area</div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Embeded Post Field #1 - Heading</div>
+               <div class="sdpi-item-label">Embedded Post Field #1 - Heading</div>
                <input id="vKrabs_Embed_Field1_Name" class="sdpi-item-value" type="text"
-                  placeholder="Embeded Post Field #1 - Heading" value=""
+                  placeholder="Embedded Post Field #1 - Heading" value=""
                   required />
             </div>
             <div type="textarea" class="sdpi-item">
-                <div class="sdpi-item-label up20">Embeded Post Field #1 Text</div>
+                <div class="sdpi-item-label up20">Embedded Post Field #1 Text</div>
                 <div class="sdpi-item-value textarea">
                   <textarea type="textarea" maxlength="2000" id="vKrabs_Embed_Field1_Value" class="three-lines"></textarea>
                 </div>
@@ -124,13 +122,13 @@
                 </div>
             </div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Embeded Post Field #2 - Heading</div>
+               <div class="sdpi-item-label">Embedded Post Field #2 - Heading</div>
                <input id="vKrabs_Embed_Field2_Name" class="sdpi-item-value" type="text"
-                  placeholder="Embeded Post Field #2 - Heading" value=""
+                  placeholder="Embedded Post Field #2 - Heading" value=""
                   required />
             </div>
             <div type="textarea" class="sdpi-item">
-                <div class="sdpi-item-label up20">Embeded Post Field #2 Text</div>
+                <div class="sdpi-item-label up20">Embedded Post Field #2 Text</div>
                 <div class="sdpi-item-value textarea">
                   <textarea type="textarea" maxlength="2000" id="vKrabs_Embed_Field2_Value" class="three-lines"></textarea>
                   <label for="vKrabs_Embed_Field2_Value">0/2000</label>
@@ -146,7 +144,7 @@
                 </div>
             </div>
 
-            <div class="sdpi-heading">Embeded Post Main Image</div>
+            <div class="sdpi-heading">Embedded Post Main Image</div>
             <div class="sdpi-item">
                <div class="sdpi-item-label">Main Image URL</div>
                <input id="vKrabs_Embed_MainImageUrl" class="sdpi-item-value" type="text"
@@ -154,15 +152,15 @@
                   required />
             </div>
 
-            <div class="sdpi-heading">Embeded Post Footer</div>
+            <div class="sdpi-heading">Embedded Post Footer</div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Embeded Post Footer Icon URL</div>
+               <div class="sdpi-item-label">Embedded Post Footer Icon URL</div>
                <input id="vKrabs_Embed_FooterIconUrl" class="sdpi-item-value" type="text"
                   placeholder="http://<yourimageurl>/<imagename>(.png or.jpg)" value=""
                   required />
             </div>
             <div type="textarea" class="sdpi-item">
-                <div class="sdpi-item-label up20">Embeded Post Footer Text</div>
+                <div class="sdpi-item-label up20">Embedded Post Footer Text</div>
                 <div class="sdpi-item-value textarea">
                   <textarea type="textarea" maxlength="2000" id="vKrabs_Embed_FooterText" class="three-lines"></textarea>
                 </div>

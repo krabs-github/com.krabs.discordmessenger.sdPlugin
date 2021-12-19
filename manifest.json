@@ -71,19 +71,37 @@
             "Tooltip": "Discord Messenger - YouTube Video",
             "PropertyInspectorPath": "discordmessengerYouTube_pi.html",
             "UUID": "com.krabs.discordmessenger.youtube"
+        },
+        {
+            "Icon": "resources/images/twitter_actionIcon",
+            "Name": "Discord Messenger - Twitter Post",
+            "States": [
+                {
+                  "Image": "resources/images/twitter_Icon",
+                  "TitleAlignment": "center",
+                  "FontFamily": "Arial",
+                  "TitleColor": "#ffffff",
+                  "FontStyle": "Bold",
+                  "FontSize": "9"
+                }
+              ],
+            "SupportedInMultiActions": false,
+            "Tooltip": "Discord Messenger - Twitter Post",
+            "PropertyInspectorPath": "discordmessengerTwitter_pi.html",
+            "UUID": "com.krabs.discordmessenger.twitter"
         }
     ],
 
     "SDKVersion": 2,
     "Author": "Krabs",
-    "Category": "Krabs - Stream Deck Labs",
+    "Category": "Krabs - Discord Messenger",
     "CategoryIcon": "resources/images/categoryIcon",
     "CodePath": "discordmessenger.html",
-    "Description": "Discord Messenger",
+    "Description": "Discord Messenger allows you to send highly customizable formatted messages to your Discord Server. Templates for Simple Message, Custom Embed Message, Twitch Now Streaming, YouTube Video, & Twitter Post. Automated images & Information for some templates. Customization examples depending on template used: Name of Posting User, Avatar URL for Posting User, Message from Posting User, Enable/Disable Text to Speech, Embed Author Information, Author Icon Image URL, Author Name Link, Embedded Post Side Bar Color, Embedded Post Thumbnail URL, Embedded Post Title, Embedded Post Title Link, Embedded Post Title Description, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Option for Inline on/off, Main Image URL, Embedded Post Footer Icon URL, Embedded Post Footer Text, Twitch Channel Name, Stream Topic/Game, Twitter Username, URL of Twitter Post, YouTube Video URL, YouTube Channel Name, & Video Description. Please visit the URL below for images and a full description.",
     "Name": "Discord Messenger",
     "Icon": "resources/images/pluginIcon",
     "URL": "https://www.krabs.me/streamdeck-plugins",
-    "Version": "1.0.10",
+    "Version": "1.0.2",
     "OS": [
         { "Platform": "windows", "MinimumVersion": "10" },
         { "Platform": "mac", "MinimumVersion": "10.11" }

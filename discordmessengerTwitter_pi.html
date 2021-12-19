@@ -5,7 +5,7 @@
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
         <meta name=apple-mobile-web-app-capable content=yes>
         <meta name=apple-mobile-web-app-status-bar-style content=black>
-        <title>Discord Messenger - Simple Message</title>
+        <title>Discord Messenger - Twitter</title>
         <link rel="stylesheet" href="resources/css/sdpi.css">
     </head>
     <body>
@@ -24,17 +24,18 @@
                   placeholder="Name of Posting User" value=""
                   required />
             </div>
+            <div class="sdpi-heading">Tweet Information</div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Avatar URL for Posting User</div>
-               <input id="vKrabs_AvatarUrl" class="sdpi-item-value" type="text"
-                  placeholder="Avatar for Posting User" value=""
+               <div class="sdpi-item-label">Twitter Username</div>
+               <input id="vKrabs_TwitterUserName" class="sdpi-item-value" type="text"
+                  placeholder="Twitter Username (No @ Symbol)" value=""
                   required />
             </div>
-            <div type="textarea" class="sdpi-item">
-                <div class="sdpi-item-label up20">Message from Posting User</div>
-                <div class="sdpi-item-value textarea">
-                  <textarea type="textarea" maxlength="2000" id="vKrabs_Discord_Message" class="three-lines"></textarea>
-                </div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">URL of Twitter Post</div>
+               <input id="vKrabs_TwitterPostURL" class="sdpi-item-value" type="text"
+                  placeholder="https://twitter.com/<username>/status/1472242091224928265" value=""
+                  required />
             </div>
             <div class="sdpi-item" id="vKrabs_TTS">
                  <div class="sdpi-item-label">Text to Speech</div>
