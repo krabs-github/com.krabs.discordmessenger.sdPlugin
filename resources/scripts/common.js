@@ -24,7 +24,7 @@ var $localizedStrings = $localizedStrings || {},
     debugLog = function () {},
     MIMAGECACHE = MIMAGECACHE || {};
 
-const setDebugOutput = (debug) => (debug === true) ? console.log.bind(window.console) : function () {};
+const setDebugOutput = debug => (debug === true ? console.log.bind(window.console) : function() {});
 debugLog = setDebugOutput(debug);
 
 // Create a wrapper to allow passing JSON to the socket
@@ -48,7 +48,7 @@ String.prototype.lox = function () {
 
 String.prototype.sprintf = function (inArr) {
     let i = 0;
-    const args = (inArr && Array.isArray(inArr)) ? inArr : arguments;
+    const args = inArr && Array.isArray(inArr) ? inArr : arguments;
     return this.replace(/%s/g, function () {
         return args[i++];
     });
@@ -69,7 +69,7 @@ const loadLocalization = (lang, pathPrefix, cb) => {
         debugLog($localizedStrings);
         if (cb && typeof cb === 'function') cb();
     });
-}
+};
 
 var Utils = {
     sleep: function (milliseconds) {
@@ -136,20 +136,50 @@ Utils.minmax = function (v, min = 0, max = 100) {
     return Math.min(max, Math.max(min, v));
 };
 
+Utils.unique = function(arr) {
+    return Array.from(new Set(arr));
+};
+
+Utils.transformValue = function(prcnt, min, max) {
+    return Math.round(((max - min) * prcnt) / 100 + min);
+};
+
 Utils.rangeToPercent = function (value, min, max) {
-    return ((value - min) / (max - min));
+    return (value - min) / (max - min);
 };
 
 Utils.percentToRange = function (percent, min, max) {
-    return ((max - min) * percent + min);
+    return (max - min) * percent + min;
 };
 
-Utils.setDebugOutput = (debug) => {
-    return (debug === true) ? console.log.bind(window.console) : function () {};
+Utils.setDebugOutput = debug => {
+    return debug === true ? console.log.bind(window.console) : function() {};
 };
 
 Utils.randomComponentName = function (len = 6) {
     return `${Utils.randomLowerString(len)}-${Utils.randomLowerString(len)}`;
+};
+
+Utils.shuffleArray = arr => {
+    let i, j, tmp;
+    for(i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        tmp = arr[ i ];
+        arr[ i ] = arr[ j ];
+        arr[ j ] = tmp;
+    }
+    return a;
+};
+
+Utils.randomElementFromArray = arr => {
+    return arr[ Math.floor(Math.random() * arr.length) ];
+};
+
+Utils.arrayToObject = (arr, key) => {
+    arr.reduce((obj, item) => {
+        obj[item[key]] = item;
+        return obj;
+    }, {});
 };
 
 Utils.randomString = function (len = 8) {
@@ -186,9 +216,15 @@ Utils.capitalize = function (str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
+Utils.generateID = (len = 4, num = Number.MAX_SAFE_INTEGER) => {
+    return Array.from(new Array(len))
+        .map(() => Math.floor(Math.random() * num).toString(16))
+        .join("-");
+};
+
 Utils.measureText = (text, font) => {
-    const canvas = Utils.measureText.canvas || (Utils.measureText.canvas = document.createElement("canvas"));
-    const ctx = canvas.getContext("2d");
+    const canvas = Utils.measureText.canvas || (Utils.measureText.canvas = document.createElement('canvas'));
+    const ctx = canvas.getContext('2d');
     ctx.font = font || 'bold 10pt system-ui';
     return ctx.measureText(text).width;
 };
@@ -197,18 +233,18 @@ Utils.fixName = (d, dName) => {
     let i = 1;
     const base = dName;
     while (d[dName]) {
-        dName = `${base} (${i})`
+        dName = `${base} (${i})`;
         i++;
     }
     return dName;
 };
 
-Utils.isEmptyString = (str) => {
-    return (!str || str.length === 0);
+Utils.isEmptyString = str => {
+    return !str || str.length === 0;
 };
 
-Utils.isBlankString = (str) => {
-    return (!str || /^\s*$/.test(str));
+Utils.isBlankString = str => {
+    return !str || /^\s*$/.test(str);
 };
 
 Utils.log = function () {};
@@ -226,9 +262,7 @@ Utils.getUrlParameter = function (name) {
     const nameA = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     const regex = new RegExp('[\\?&]' + nameA + '=([^&#]*)');
     const results = regex.exec(location.search.replace(/\/$/, ''));
-    return results === null
-        ? null
-        : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
 Utils.debounce = function (func, wait = 100) {
@@ -238,6 +272,25 @@ Utils.debounce = function (func, wait = 100) {
         timeout = setTimeout(() => {
             func.apply(this, args);
         }, wait);
+    };
+};
+
+Utils.throttle = function(fn, threshold = 250, context) {
+    let last, timer;
+    return function() {
+        var ctx = context || this;
+        var now = new Date().getTime(),
+            args = arguments;
+        if (last && now < last + threshold) {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                last = now;
+                fn.apply(ctx, args);
+            }, threshold);
+        } else {
+            last = now;
+            fn.apply(ctx, args);
+        }
     };
 };
 
@@ -302,7 +355,7 @@ Utils.nscolorToRgb = function (rP, gP, bP) {
         r : Math.round(rP * 255),
         g : Math.round(gP * 255),
         b : Math.round(bP * 255)
-    }
+    };
 };
 
 Utils.nsColorToHex = function (rP, gP, bP) {
@@ -347,6 +400,21 @@ Utils.readJson = function (file, callback) {
     req.send(null);
 };
 
+Utils.readFile = function(url) {
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            //resolve(new Response(xhr.responseText, {status: xhr.status}))
+            resolve(xhr.responseText);
+        };
+        xhr.onerror = function() {
+            reject(new TypeError('Local request failed'));
+        };
+        xhr.open('GET', url);
+        xhr.send(null);
+    });
+};
+
 Utils.loadScript = function (url, callback) {
     const el = document.createElement('script');
     el.src = url;
@@ -385,17 +453,21 @@ Utils.parseJSONPromise = function (jsonString) {
 
     return new Promise((resolve, reject) => {
         try {
-            resolve(JSON.parse(jsonString));
+            const o = JSON.parse(jsonString);
+            if(o && typeof o === 'object') {
+                resolve(o);
+            } else {
+                resolve({});
+            }
         } catch (e) {
             reject(e);
         }
     });
 };
 
-/* eslint-disable import/prefer-default-export */
+
 Utils.getProperty = function (obj, dotSeparatedKeys, defaultValue) {
-    if (arguments.length > 1 && typeof dotSeparatedKeys !== 'string')
-        return undefined;
+    if (arguments.length > 1 && typeof dotSeparatedKeys !== 'string') return undefined;
     if (typeof obj !== 'undefined' && typeof dotSeparatedKeys === 'string') {
         const pathArr = dotSeparatedKeys.split('.');
         pathArr.forEach((key, idx, arr) => {
@@ -417,18 +489,14 @@ Utils.getProperty = function (obj, dotSeparatedKeys, defaultValue) {
             }
         });
         // eslint-disable-next-line no-param-reassign, no-confusing-arrow
-        obj = pathArr.reduce(
-            (o, key) => (o && o[key] !== 'undefined' ? o[key] : undefined),
-            obj
-        );
+        obj = pathArr.reduce((o, key) => (o && o[key] !== 'undefined' ? o[key] : undefined), obj);
     }
     return obj === undefined ? defaultValue : obj;
 };
 
 Utils.getProp = (jsn, str, defaultValue = {}, sep = '.') => {
     const arr = str.split(sep);
-    return arr.reduce((obj, key) =>
-        (obj && obj.hasOwnProperty(key)) ? obj[key] : defaultValue, jsn);
+    return arr.reduce((obj, key) => (obj && obj.hasOwnProperty(key) ? obj[key] : defaultValue), jsn);
 };
 
 Utils.setProp = function (jsonObj, path, value) {
@@ -452,7 +520,7 @@ Utils.setProp = function (jsonObj, path, value) {
     return jsn;
 };
 
-Utils.getDataUri = function (url, callback, inCanvas, inFillcolor) {
+Utils.getDataUriWithOverlay = function (url, callback, inCanvas, inFillcolor, vOverlay, vFilter) {
     var image = new Image();
 
     image.onload = function () {
@@ -469,111 +537,53 @@ Utils.getDataUri = function (url, callback, inCanvas, inFillcolor) {
             ctx.fillStyle = inFillcolor;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
         }
+        // Begin Filters
+        if (vFilter) {
+          ctx.filter = vFilter;
+        }
+        // End Filters
 
         ctx.drawImage(this, 0, 0, 72, 72);
         // Get raw image data
         // callback && callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
 
-// Begin Discord Logo
-        ctx.save();
-        ctx.strokeStyle="rgba(0,0,0,0)";
-        ctx.miterLimit=4;
-        ctx.font="15px / 21.4286px ''";
-        ctx.font="   15px ''";
-        ctx.translate(-6,0);
-        ctx.scale(0.14634146341463414,0.14634146341463414);
-        ctx.save();
-        ctx.restore();
-        ctx.save();
-        ctx.font="   15px ''";
-        ctx.save();
-        ctx.font="   15px ''";
-        ctx.beginPath();
-        ctx.moveTo(78,31);
-        ctx.lineTo(250,31);
-        ctx.bezierCurveTo(250,31,250,31,250,31);
-        ctx.lineTo(250,203);
-        ctx.bezierCurveTo(250,203,250,203,250,203);
-        ctx.lineTo(78,203);
-        ctx.bezierCurveTo(78,203,78,203,78,203);
-        ctx.lineTo(78,31);
-        ctx.bezierCurveTo(78,31,78,31,78,31);
-        ctx.closePath();
-        ctx.clip();
-        ctx.save();
-        ctx.fillStyle="#5865F2";
-        ctx.font="   15px ''";
-        ctx.beginPath();
-        ctx.moveTo(78,116.8);
-        ctx.bezierCurveTo(78,69.4,116.4,31,163.8,31);
-        ctx.bezierCurveTo(211.20000000000002,31,249.60000000000002,69.4,249.60000000000002,116.8);
-        ctx.bezierCurveTo(249.60000000000002,164.2,211.20000000000002,202.6,163.8,202.6);
-        ctx.bezierCurveTo(163.8,202.6,163.8,202.6,163.8,202.6);
-        ctx.bezierCurveTo(116.4,202.5,78,164.1,78,116.8);
-        ctx.bezierCurveTo(78,116.8,78,116.8,78,116.8);
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-        ctx.restore();
-        ctx.save();
-        ctx.fillStyle="#FFFFFF";
-        ctx.font="   15px ''";
-        ctx.beginPath();
-        ctx.moveTo(202.4,81.9);
-        ctx.bezierCurveTo(195.1,78.60000000000001,187.5,76.2,179.6,74.9);
-        ctx.bezierCurveTo(178.6,76.7,177.5,79,176.7,80.9);
-        ctx.bezierCurveTo(168.29999999999998,79.60000000000001,159.79999999999998,79.60000000000001,151.39999999999998,80.9);
-        ctx.bezierCurveTo(150.49999999999997,78.80000000000001,149.49999999999997,76.80000000000001,148.39999999999998,74.9);
-        ctx.bezierCurveTo(140.49999999999997,76.2,132.79999999999998,78.60000000000001,125.59999999999998,82);
-        ctx.bezierCurveTo(111.19999999999997,103.5,107.29999999999998,124.4,109.19999999999999,145.1);
-        ctx.bezierCurveTo(117.69999999999999,151.4,127.1,156.2,137.2,159.2);
-        ctx.bezierCurveTo(139.5,156.1,141.5,152.89999999999998,143.2,149.5);
-        ctx.bezierCurveTo(139.89999999999998,148.3,136.79999999999998,146.8,133.79999999999998,145);
-        ctx.bezierCurveTo(134.6,144.4,135.29999999999998,143.8,136.1,143.2);
-        ctx.bezierCurveTo(153.79999999999998,151.6,174.39999999999998,151.6,192.1,143.2);
-        ctx.bezierCurveTo(192.9,143.79999999999998,193.6,144.39999999999998,194.4,145);
-        ctx.bezierCurveTo(191.4,146.8,188.20000000000002,148.3,184.9,149.5);
-        ctx.bezierCurveTo(186.6,152.9,188.6,156.1,190.9,159.2);
-        ctx.bezierCurveTo(201,156.1,210.5,151.39999999999998,218.9,145.1);
-        ctx.bezierCurveTo(221.1,121.1,214.9,100.3,202.4,81.9);
-        ctx.closePath();
-        ctx.moveTo(145.6,132.3);
-        ctx.bezierCurveTo(140.1,132.3,135.7,127.30000000000001,135.7,121.20000000000002);
-        ctx.bezierCurveTo(135.7,115.10000000000002,140.1,110.00000000000001,145.6,110.00000000000001);
-        ctx.bezierCurveTo(151.2,110.00000000000001,155.6,115.00000000000001,155.6,121.20000000000002);
-        ctx.bezierCurveTo(155.5,127.3,151.2,132.3,145.6,132.3);
-        ctx.closePath();
-        ctx.moveTo(182.4,132.3);
-        ctx.bezierCurveTo(176.9,132.3,172.5,127.30000000000001,172.5,121.20000000000002);
-        ctx.bezierCurveTo(172.5,115.10000000000002,176.9,110.00000000000001,182.4,110.00000000000001);
-        ctx.bezierCurveTo(188,110.00000000000001,192.4,115.00000000000001,192.3,121.20000000000002);
-        ctx.bezierCurveTo(192.20000000000002,127.40000000000002,187.9,132.3,182.4,132.3);
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-        ctx.restore();
-        ctx.restore();
-        ctx.restore();
-        ctx.save();
-        ctx.fillStyle="rgba(0,0,0,0)";
-        ctx.font="   15px ''";
-        ctx.beginPath();
-        ctx.moveTo(64,17);
-        ctx.lineTo(264,17);
-        ctx.bezierCurveTo(264,17,264,17,264,17);
-        ctx.lineTo(264,217);
-        ctx.bezierCurveTo(264,217,264,217,264,217);
-        ctx.lineTo(64,217);
-        ctx.bezierCurveTo(64,217,64,217,64,217);
-        ctx.lineTo(64,17);
-        ctx.bezierCurveTo(64,17,64,17,64,17);
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-        ctx.restore();
-        ctx.restore();
-// End Discord Logo
+        // Begin Overlay
+        if (vOverlay) {
+          eval(vOverlay);
+        }
+        // End Overlay
 
+        // ... or get as Data URI
+        callback(canvas.toDataURL('image/png'));
+    };
+
+    image.src = url;
+};
+
+Utils.getDataUri = function (url, callback, inCanvas, inFillcolor, vFilter) {
+    var image = new Image();
+
+    image.onload = function () {
+        const canvas =
+            inCanvas && Utils.isCanvas(inCanvas)
+                ? inCanvas
+                : document.createElement('canvas');
+
+        canvas.width = 72; // or 'width' if you want a special/scaled size
+        canvas.height = 72; // or 'height' if you want a special/scaled size
+
+        const ctx = canvas.getContext('2d');
+        if (inFillcolor) {
+            ctx.fillStyle = inFillcolor;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+        if (vFilter) {
+          ctx.filter = vFilter;
+        }
+
+        ctx.drawImage(this, 0, 0, 72, 72);
+        // Get raw image data
+        // callback && callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
         // ... or get as Data URI
         callback(canvas.toDataURL('image/png'));
     };
@@ -593,6 +603,49 @@ Utils.injectStyle = function (styles, styleId) {
    return node;
 };
 
+Utils.loadImageData = function(inUrl, callback) {
+    let image = new Image();
+    image.onload = function() {
+        callback(image);
+        // or to get raw image data
+        // callback && callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
+    };
+    image.src = inUrl;
+};
+
+Utils.loadImagePromise = url =>
+    new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => resolve({url, status: 'ok'});
+        img.onerror = () => resolve({url, status: 'error'});
+        img.src = url;
+    });
+
+Utils.loadImages = arrayOfUrls => Promise.all(arrayOfUrls.map(Utils.loadImagePromise));
+
+Utils.loadImageWithOptions = (url, w, h, inCanvas, clearCtx, inFillcolor) =>
+    new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => {
+            const canvas = inCanvas && Utils.isCanvas(inCanvas) ? inCanvas : document.createElement('canvas');
+            canvas.width = w || img.naturalWidth; // or 'width' if you want a special/scaled size
+            canvas.height = h || img.naturalHeight; // or 'height' if you want a special/scaled size
+            console.log('IMG', img, img.naturalWidth);
+            const ctx = canvas.getContext('2d');
+            if(clearCtx) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+            if(inFillcolor) {
+                ctx.fillStyle = inFillcolor;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            window.bbb = canvas.toDataURL('image/png');
+            resolve({url, status: 'ok', image: canvas.toDataURL('image/png')}); // raw image with: canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, '');
+        };
+        img.onerror = () => resolve({url, status: 'error'});
+        img.src = url;
+    });
 
 Utils.loadImage = function (inUrl, callback, inCanvas, inFillcolor) {
     /** Convert to array, so we may load multiple images at once */
@@ -698,19 +751,28 @@ Utils.onChange = function (object, callback) {
     const handler = {
         get (target, property, receiver) {
             try {
-                console.log('get via Proxy: ', property, target, receiver);
                 return new Proxy(target[property], handler);
             } catch (err) {
-                console.log('get via Reflect: ', err, property, target, receiver);
                 return Reflect.get(target, property, receiver);
             }
         },
         set (target, property, value, receiver) {
-            console.log('Utils.onChange:set1:', target, property, value, receiver);
-            // target[property] = value;
-            const b = Reflect.set(target, property, value);
-            console.log('Utils.onChange:set2:', target, property, value, receiver);
-            return b;
+            try {
+                if(callback && !callback(target, property, value)) {
+                    throw new Error(`${value} is not a valid ${property}`);
+                };
+
+                const oldValue = Reflect.get(target, property, value, receiver);
+                const success = Reflect.set(target, property, value);
+
+                if(oldValue !== value && typeof changedCallback === 'function') {
+                    changedCallback(target, property, value, oldValue);
+                }
+                return success;
+            } catch(err) {
+                console.warn(`proxy:property was not SAVED: ${err}`);
+                return Reflect.get(target, property, receiver) || {};
+            }
         },
         defineProperty (target, property, descriptor) {
             console.log('Utils.onChange:defineProperty:', target, property, descriptor);
@@ -755,6 +817,8 @@ Utils.observeArray = function (object, callback) {
 
     return new Proxy(object, handler);
 };
+
+Utils.noop = function() {};
 
 window['_'] = Utils;
 
@@ -849,10 +913,10 @@ const StreamDeck = (function () {
 
             const lang = Utils.getProp(inApplicationInfo,'application.language', false);
             if (lang) {
-                loadLocalization(lang, inMessageType === 'registerPropertyInspector' ? './' : './', function() {
+                loadLocalization(lang, inMessageType === 'registerPropertyInspector' ? '../' : './', function() {
                     events.emit('localizationLoaded', {language:lang});
                 });
-            };
+            }
 
             /** restrict the API to what's possible
              * within Plugin or Property Inspector
@@ -863,7 +927,7 @@ const StreamDeck = (function () {
             if (websocket) {
                 websocket.close();
                 websocket = null;
-            };
+            }
 
             websocket = new WebSocket('ws://127.0.0.1:' + inPort);
 
@@ -899,10 +963,7 @@ const StreamDeck = (function () {
             websocket.onclose = function (evt) {
                 // Websocket is closed
                 var reason = WEBSOCKETERROR(evt);
-                console.warn(
-                    '[STREAMDECK]***** WEBOCKET CLOSED **** reason:',
-                    reason
-                );
+                console.warn('[STREAMDECK]***** WEBOCKET CLOSED **** reason:', reason);
             };
 
             websocket.onmessage = function (evt) {
@@ -981,11 +1042,9 @@ const ELGEvents = {
             return eventList.get(name).sub(fn);
         };
 
-        const has = (name) =>
-            eventList.has(name);
+        const has = name => eventList.has(name);
 
-        const emit = (name, data) =>
-            eventList.has(name) && eventList.get(name).pub(data);
+        const emit = (name, data) => eventList.has(name) && eventList.get(name).pub(data);
 
         return Object.freeze({ on, has, emit, eventList });
     },
@@ -1087,7 +1146,7 @@ const SDApi = {
         setState: function (context, payload) {
             SDApi.send(context, 'setState', {
                 payload: {
-                    'state': 1 - Number(payload === 0)
+                    state: 1 - Number(payload === 0)
                 }
             });
         },
@@ -1096,6 +1155,14 @@ const SDApi = {
             SDApi.send(context, 'setTitle', {
                 payload: {
                     title: '' + title || '',
+                    target: target || DestinationEnum.HARDWARE_AND_SOFTWARE
+                }
+            });
+        },
+
+        clearTitle: function(context, title, target) {
+            SDApi.send(context, 'setTitle', {
+                payload: {
                     target: target || DestinationEnum.HARDWARE_AND_SOFTWARE
                 }
             });
@@ -1148,7 +1215,8 @@ const SDApi = {
     common: {
 
         getSettings: function (context, payload) {
-            SDApi.send(context, 'getSettings', {});
+            const uuid = context ? context : $SD.uuid;
+            SDApi.send(uuid, 'getSettings', {});
         },
 
         setSettings: function (context, payload) {
@@ -1157,14 +1225,31 @@ const SDApi = {
             });
         },
 
-        getGlobalSettings: function (context, payload) {
-            SDApi.send(context, 'getGlobalSettings', {});
+        getGlobalSettings: function(context) {
+            const uuid = context ? context : $SD.uuid;
+            SDApi.send(uuid, 'getGlobalSettings', {});
         },
 
         setGlobalSettings: function (context, payload) {
-            SDApi.send(context, 'setGlobalSettings', {
+            const uuid = context ? context : $SD.uuid;
+            SDApi.send(uuid, 'setGlobalSettings', {
                 payload: payload
             });
+        },
+
+        switchToProfile: function(inContext, inDeviceID, inProfileName = null) {
+            if(inDeviceID && inDeviceID.length !== 0) {
+                const context = inContext ? inContext : $SD.uuid;
+                const device = inDeviceID;
+                const event = 'switchToProfile';
+                if(inProfileName && inProfileName.length !== 0) {
+                    const payload = {
+                        profile: inProfileName
+                    };
+                    const pl = Object.assign({}, {event, context, device}, payload);
+                    $SD.connection && $SD.connection.sendJSON(pl);
+                }
+            }
         },
 
         logMessage: function () {
@@ -1175,7 +1260,7 @@ const SDApi = {
             * logMessage('message')
             */
 
-            let payload = (arguments.length > 1) ? arguments[1] : arguments[0];
+            let payload = arguments.length > 1 ? arguments[1] : arguments[0];
 
             SDApi.send(null, 'logMessage', {
                 payload: {
@@ -1240,8 +1325,7 @@ const SDDebug = {
             debugLog('---');
         };
 
-        const logSomething = jsn =>
-            console.log('____SDDebug.logger.logSomething');
+        const logSomething = jsn => console.log('____SDDebug.logger.logSomething');
 
         return { logEvent, logSomething };
     }
@@ -1267,7 +1351,7 @@ function WEBSOCKETERROR (evt) {
     } else if (evt.code === 1002) {
         reason = 'Protocol error. An endpoint is terminating the connection due to a protocol error';
     } else if (evt.code === 1003) {
-        reason = "Unsupported Data. An endpoint received a type of data it doesn't support.";
+        reason = 'Unsupported Data. An endpoint received a type of data it doesn\'t support.';
     } else if (evt.code === 1004) {
         reason = '--Reserved--. The specific meaning might be defined in the future.';
     } else if (evt.code === 1005) {
@@ -1280,12 +1364,15 @@ function WEBSOCKETERROR (evt) {
         reason = 'Policy Violation. The connection was closed, because current message data "violates its policy". This reason is given either if there is no other suitable reason, or if there is a need to hide specific details about the policy.';
     } else if (evt.code === 1009) {
         reason = 'Message Too Big. Connection closed because the message is too big for it to process.';
-    } else if (evt.code === 1010) { // Note that this status code is not used by the server, because it can fail the WebSocket handshake instead.
-        reason = "Mandatory Ext. Connection is terminated the connection because the server didn't negotiate one or more extensions in the WebSocket handshake. <br /> Mandatory extensions were: " + evt.reason;
+    } else if(evt.code === 1010) {
+        // Note that this status code is not used by the server, because it can fail the WebSocket handshake instead.
+        reason =
+            'Mandatory Ext. Connection is terminated the connection because the server didn\'t negotiate one or more extensions in the WebSocket handshake. <br /> Mandatory extensions were: ' +
+            evt.reason;
     } else if (evt.code === 1011) {
-        reason = 'Internl Server Error. Connection closed because it encountered an unexpected condition that prevented it from fulfilling the request.';
+        reason = 'Internal Server Error. Connection closed because it encountered an unexpected condition that prevented it from fulfilling the request.';
     } else if (evt.code === 1015) {
-        reason = "TLS Handshake. The connection was closed due to a failure to perform a TLS handshake (e.g., the server certificate can't be verified).";
+        reason = 'TLS Handshake. The connection was closed due to a failure to perform a TLS handshake (e.g., the server certificate can\'t be verified).';
     } else {
         reason = 'Unknown reason';
     }

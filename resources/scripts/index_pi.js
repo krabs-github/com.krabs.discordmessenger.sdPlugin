@@ -107,15 +107,15 @@ const updateUI = (pl) => {
         if (e && e != '') {
             const foundElement = document.querySelector(`#${e}`);
             console.log(`searching for: #${e}`, 'found:', foundElement);
-            if (foundElement) {
+            if (foundElement && foundElement.type !== 'file') {
                 foundElement.value = pl[e];
                 const maxl = foundElement.getAttribute('maxlength') || 50;
-                //const labels = document.querySelectorAll(`[for='${foundElement.id}']`);
-                /*if (labels.length) {
+                const labels = document.querySelectorAll(`[for='${foundElement.id}']`);
+                if (labels.length) {
                     for (let x of labels) {
                         x.textContent = maxl ? `${foundElement.value.length}/${maxl}` : `${foundElement.value.length}`;
                     }
-                }*/
+                }
             }
         }
    })
@@ -158,11 +158,29 @@ $SD.on('piDataChanged', (returnValue) => {
     console.log('%c%s', 'color: white; background: blue}; font-size: 15px;', 'piDataChanged');
     console.log(returnValue);
 
-    /* SAVE THE VALUE TO SETTINGS */
-    saveSettings(returnValue);
+    if (returnValue.key === 'clickme') {
 
-    /* SEND THE VALUES TO PLUGIN */
-    sendValueToPlugin(returnValue, 'sdpi_collection');
+        postMessage = (w) => {
+            w.postMessage(
+                Object.assign({}, $SD.applicationInfo.application, {action: $SD.actionInfo.action})
+                ,'*');
+        }
+
+        if (!window.xtWindow || window.xtWindow.closed) {
+            window.xtWindow  = window.open('../externalWindow.html', 'External Window');
+            setTimeout(() => postMessage(window.xtWindow), 200);
+        } else {
+           postMessage(window.xtWindow);
+        }
+
+    } else {
+
+        /* SAVE THE VALUE TO SETTINGS */
+        saveSettings(returnValue);
+
+        /* SEND THE VALUES TO PLUGIN */
+        sendValueToPlugin(returnValue, 'sdpi_collection');
+    }
 });
 
 /**
@@ -386,7 +404,12 @@ function handleSdpiItemChange(e, idx) {
         }
     }
 
-    if (e.selectedIndex) {
+    if (e.selectedIndex !== undefined) {
+        if (e.tagName === 'SELECT') {
+            sdpiItemChildren.forEach((ec, i) => {
+                selectedElements.push({ [ec.id]: ec.value });
+            });
+        }
         idx = e.selectedIndex;
     } else {
         sdpiItemChildren.forEach((ec, i) => {

@@ -15,7 +15,7 @@
               ],
             "SupportedInMultiActions": false,
             "Tooltip": "Discord Messenger - Simple Message",
-            "PropertyInspectorPath": "discordmessengerSimple_pi.html",
+            "PropertyInspectorPath": "PI/discordmessengerSimple_pi.html",
             "UUID": "com.krabs.discordmessenger.simple"
         },
         {
@@ -33,7 +33,7 @@
               ],
             "SupportedInMultiActions": false,
             "Tooltip": "Discord Messenger - Custom Embed",
-            "PropertyInspectorPath": "discordmessengerCustomEmbed_pi.html",
+            "PropertyInspectorPath": "PI/discordmessengerCustomEmbed_pi.html",
             "UUID": "com.krabs.discordmessenger.custom"
         },
         {
@@ -51,7 +51,7 @@
               ],
             "SupportedInMultiActions": false,
             "Tooltip": "Discord Messenger - Twitch Now Streaming",
-            "PropertyInspectorPath": "discordmessengerTwitch_pi.html",
+            "PropertyInspectorPath": "PI/discordmessengerTwitch_pi.html",
             "UUID": "com.krabs.discordmessenger.twitch"
         },
         {
@@ -69,7 +69,7 @@
               ],
             "SupportedInMultiActions": false,
             "Tooltip": "Discord Messenger - YouTube Video",
-            "PropertyInspectorPath": "discordmessengerYouTube_pi.html",
+            "PropertyInspectorPath": "PI/discordmessengerYouTube_pi.html",
             "UUID": "com.krabs.discordmessenger.youtube"
         },
         {
@@ -87,7 +87,7 @@
               ],
             "SupportedInMultiActions": false,
             "Tooltip": "Discord Messenger - Twitter Post",
-            "PropertyInspectorPath": "discordmessengerTwitter_pi.html",
+            "PropertyInspectorPath": "PI/discordmessengerTwitter_pi.html",
             "UUID": "com.krabs.discordmessenger.twitter"
         }
     ],
@@ -101,7 +101,7 @@
     "Name": "Discord Messenger",
     "Icon": "resources/images/pluginIcon",
     "URL": "https://www.krabs.me/streamdeck-plugins",
-    "Version": "1.0.2",
+    "Version": "1.0.3",
     "OS": [
         { "Platform": "windows", "MinimumVersion": "10" },
         { "Platform": "mac", "MinimumVersion": "10.11" }
