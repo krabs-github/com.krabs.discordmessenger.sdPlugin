@@ -53,6 +53,27 @@
       "Stream Information": "Informace o streamu",
       "Twitch Channel Name": "Název Twitch kanálu",
       "Stream Topic/Game (max. 40 chars)": "Popis streamu/jméno hry (max. 40 znaků)",
-      "Message from Posting User": "Zpráva od odesílatele"
+      "Message from Posting User": "Zpráva od odesílatele",
+      "Author Name": "Jméno autora",
+      "Embed Author Information": "Informace o autorovi vloženého příspěvku",
+      "Embedded Post Settings": "Nastavení vloženého příspěvku",
+      "Title": "Nadpis",
+      "Embedded Post Thumbnail URL": "URL náhledového obrázku vloženého příspěvku",
+      "Embedded Post Title Content": "Text nadpisu vloženého příspěvku",
+      "Embedded Post Title": "Nadpis vloženého příspěvku",
+      "Embedded Post Title Link": "Odkaz nadpisu vloženého příspěvku",
+      "Embedded Post Title Description": "Popis nadpisu vloženého příspěvku",
+      "Embedded Post Content Main Area": "Tělo vloženého příspěvku",
+      "Embedded Post Field #1 - Heading": "Pole #1 vloženého příspěvku – nadpis",
+      "Embedded Post Field #1 Text": "Pole #1 vloženého příspěvku – text",
+      "Embedded Post Field #2 - Heading": "Pole #2 vloženého příspěvku → nadpis",
+      "Embedded Post Field #2 Text": "Pole #2 vloženého příspěvku – text",
+      "Inline": "Sloučení do jednoho řádku",
+      "Embedded Post Main Image": "Hlavní obrázek vloženého příspěvku",
+      "Main Image URL": "URL hlavního obrázku",
+      "Embedded Post Footer": "Patička vloženého příspěvku",
+      "Embedded Post Footer Icon URL": "URL ikony patičky vloženého příspěvku",
+      "Embedded Post Footer Text": "Text patičky vloženého příspěvku",
+      "Translation by": "Přeložil Danol"
     }
 }

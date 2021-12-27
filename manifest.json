@@ -101,10 +101,11 @@
     "Name": "Discord Messenger",
     "Icon": "resources/images/pluginIcon",
     "URL": "https://www.krabs.me/streamdeck-plugins",
-    "Version": "1.0.3",
+    "Version": "1.0.4",
     "OS": [
         { "Platform": "windows", "MinimumVersion": "10" },
         { "Platform": "mac", "MinimumVersion": "10.11" }
     ],
-    "Software": { "MinimumVersion": "5.0" }
+    "Software": { "MinimumVersion": "5.0" },
+    "DefaultWindowSize": [416, 768]
 }
