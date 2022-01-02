@@ -1,0 +1,79 @@
+{
+  "Name": "Discord Messenger",
+  "Category": "Krabs - Discord Messenger",
+  "Description": "Discord Messenger allows you to send highly customizable formatted messages to your Discord Server. Templates for Simple Message, Custom Embed Message, Twitch Now Streaming, YouTube Video, & Twitter Post. Automated images & Information for some templates. Customization settings are dependent on template used: Name of Posting User, Avatar URL for Posting User, Message from Posting User, Enable/Disable Text to Speech, Embed Author Information, Author Icon Image URL, Author Name Link, Embedded Post Side Bar Color, Embedded Post Thumbnail URL, Embedded Post Title, Embedded Post Title Link, Embedded Post Title Description, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Option for Inline on/off, Main Image URL, Embedded Post Footer Icon URL, Embedded Post Footer Text, Twitch Channel Name, Stream Topic/Game, Twitter Username, URL of Twitter Post, YouTube Video URL, YouTube Channel Name, & Video Description. Please visit the URL below for images and a full description.",
+
+    "com.krabs.discordmessenger.simple":
+    {
+        "Name": "Discord Messenger - Simple Message",
+        "Tooltip": "Discord Messenger - Simple Message"
+    },
+    "com.krabs.discordmessenger.custom":
+    {
+        "Name": "Discord Messenger - Custom Embed",
+        "Tooltip": "Discord Messenger - Custom Embed"
+    },
+    "com.krabs.discordmessenger.twitch":
+    {
+        "Name": "Discord Messenger - Twitch Now Streaming",
+        "Tooltip": "Discord Messenger - Twitch Now Streaming"
+    },
+    "com.krabs.discordmessenger.youtube":
+    {
+        "Name": "Discord Messenger - YouTube Video",
+        "Tooltip": "Discord Messenger - YouTube Video"
+    },
+    "com.krabs.discordmessenger.twitter":
+    {
+        "Name": "Discord Messenger - Twitter Post",
+        "Tooltip": "Discord Messenger - Twitter Post"
+    },
+    "Localization": {
+      "Configuration": "設定",
+      "Background Image": "背景のイメージ",
+      "no file": "ファイル非存在...",
+      "Choose file": "ファイルを選択...",
+      "Discord Webhook URL": "DiscordのWebhookのリンク",
+      "Enter your Discord Webhook URL": "DiscordのWebhookのリンクを入力する",
+      "Posting User Information": "アップするユーザーの情報",
+      "Name of Posting User": "通信するユーザ名",
+      "Tweet Information": "ツイートの情報",
+      "Twitter Username": "Twitterのユーザー名",
+      "Twitter Username (No @ Symbol)": "Twitterのユーザー名(@マーク除き)",
+      "URL of Twitter Post": "ツイートのリンク",
+      "Text to Speech": "文字を読み上げ",
+      "Off": "無効",
+      "On": "有効",
+      "Avatar URL for Posting User": "アップしたユーザーのアバターのリンク",
+      "Embedded Post Side Bar Color": "埋め込みツイートの背景色",
+      "Video Information": "動画の情報",
+      "YouTube Video URL": "YouTubeの動画のリンク",
+      "YouTube Channel Name": "YouTubeチャンネル名",
+      "Video Description (max. 40 chars)": "動画について(最大40文字以内)",
+      "Stream Information": "配信の情報",
+      "Twitch Channel Name": "Twitchチャンネル名",
+      "Stream Topic/Game (max. 40 chars)": "配信のタイトルやゲーム名(最大40文字以内)",
+      "Message from Posting User": "コメントの文章",
+      "Author Name": "Author Name",
+      "Embed Author Information": "Embed Author Information",
+      "Embedded Post Settings": "Embedded Post Settings",
+      "Title": "Title",
+      "Embedded Post Thumbnail URL": "Embedded Post Thumbnail URL",
+      "Embedded Post Title Content": "Embedded Post Title Content",
+      "Embedded Post Title": "Embedded Post Title",
+      "Embedded Post Title Link": "Embedded Post Title Link",
+      "Embedded Post Title Description": "Embedded Post Title Description",
+      "Embedded Post Content Main Area": "Embedded Post Content Main Area",
+      "Embedded Post Field #1 - Heading": "Embedded Post Field #1 - Heading",
+      "Embedded Post Field #1 Text": "Embedded Post Field #1 Text",
+      "Embedded Post Field #2 - Heading": "Embedded Post Field #2 - Heading",
+      "Embedded Post Field #2 Text": "Embedded Post Field #2 Text",
+      "Inline": "Inline",
+      "Embedded Post Main Image": "Embedded Post Main Image",
+      "Main Image URL": "Main Image URL",
+      "Embedded Post Footer": "Embedded Post Footer",
+      "Embedded Post Footer Icon URL": "Embedded Post Footer Icon URL",
+      "Embedded Post Footer Text": "Embedded Post Footer Text",
+      "Translation by": "Translation by Dannek Rose"
+    }
+}

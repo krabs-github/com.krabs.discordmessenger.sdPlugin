@@ -1,0 +1,79 @@
+{
+  "Name": "Discord Messenger",
+  "Category": "Krabs - Discord Messenger",
+  "Description": "Discord Messenger vám umožní odesílat vysoce přizpůsobitelné formátované zprávy do Discord serverů. Obsahuje šablony pro jednoduchou zprávu, vlastní vložený příspěvek, oznámení o Twitch streamu, Youtube video a příspěvek na Twitteru. Automatické vkládání obrázků a dodatečných informací pro některé šablony. Konfigurovatelné hodnoty (dostupnost se pro různé šablony liší): jméno odesílatele zprávy, URL avataru odesílatele zprávy, zpráva od odesílatele, povolení/zakázání automatického předčítání, informace o autorovi vloženého příspěvku, URL avataru autora vloženého příspěvku, odkaz pro autorovo jméno, barva dekorace vloženého příspěvku, URL náhledového obrázku příspěvku, nadpis vloženého příspěvku, odkaz pro nadpis vloženého příspěvku, popis nadpisu vloženého příspěvku, pole #1 vloženého příspěvku – nadpis, pole #1 vloženého příspěvku – text, zapnout/vypnout sloučení do jednoho řádku, URL hlavního obrázku, URL ikony pro patičku vloženého příspěvku, text patičky vloženého příspěvku, jméno Twitch kanálu, hra/téma streamu, Twitter uživatelské jméno, URL Twitter příspěvku, URL Youtube videa, jméno Youtube kanálu, popis Youtube videa. Detailnejší popis s obrázky naleznete na adrese níže.",
+
+    "com.krabs.discordmessenger.simple":
+    {
+        "Name": "Discord Messenger - Jednoduchá zpráva",
+        "Tooltip": "Discord Messenger - Jednoduchá zpráva"
+    },
+    "com.krabs.discordmessenger.custom":
+    {
+        "Name": "Discord Messenger - Vlastní vložený příspěvek",
+        "Tooltip": "Discord Messenger - Vlastní vložený příspěvek"
+    },
+    "com.krabs.discordmessenger.twitch":
+    {
+        "Name": "Discord Messenger - Oznámení o Twitch streamu",
+        "Tooltip": "Discord Messenger - Oznámení o Twitch streamu"
+    },
+    "com.krabs.discordmessenger.youtube":
+    {
+        "Name": "Discord Messenger - YouTube video",
+        "Tooltip": "Discord Messenger - YouTube video"
+    },
+    "com.krabs.discordmessenger.twitter":
+    {
+        "Name": "Discord Messenger - Twitter příspěvek",
+        "Tooltip": "Discord Messenger - Twitter příspěvek"
+    },
+    "Localization": {
+      "Configuration": "Nastavení",
+      "Background Image": "Obrázek na pozadí",
+      "no file": "soubor nevybrán...",
+      "Choose file": "Zvolte soubor...",
+      "Discord Webhook URL": "Discord Webhook URL",
+      "Enter your Discord Webhook URL": "Vložte vaše Discord Webhook URL",
+      "Posting User Information": "Informace o odesílateli zprávy",
+      "Name of Posting User": "Jméno odesílatele zprávy",
+      "Tweet Information": "Informace o tweetu",
+      "Twitter Username": "Twitteru uživatelské jméno",
+      "Twitter Username (No @ Symbol)": "Twitteru uživatelské jméno (bez @ na začátku)",
+      "URL of Twitter Post": "URL Twitter příspěvku",
+      "Text to Speech": "Předčítání (text-to-speech)",
+      "Off": "Vypnuto",
+      "On": "Zapnuto",
+      "Avatar URL for Posting User": "URL avataru odesílatele zprávy",
+      "Embedded Post Side Bar Color": "Barva dekorace vloženého příspěvku",
+      "Video Information": "Informace o videu",
+      "YouTube Video URL": "URL Youtube videa",
+      "YouTube Channel Name": "Název YouTube kanálu",
+      "Video Description (max. 40 chars)": "Popis videa (max. 40 znaků)",
+      "Stream Information": "Informace o streamu",
+      "Twitch Channel Name": "Název Twitch kanálu",
+      "Stream Topic/Game (max. 40 chars)": "Popis streamu/jméno hry (max. 40 znaků)",
+      "Message from Posting User": "Zpráva od odesílatele",
+      "Author Name": "Jméno autora",
+      "Embed Author Information": "Informace o autorovi vloženého příspěvku",
+      "Embedded Post Settings": "Nastavení vloženého příspěvku",
+      "Title": "Nadpis",
+      "Embedded Post Thumbnail URL": "URL náhledového obrázku vloženého příspěvku",
+      "Embedded Post Title Content": "Text nadpisu vloženého příspěvku",
+      "Embedded Post Title": "Nadpis vloženého příspěvku",
+      "Embedded Post Title Link": "Odkaz nadpisu vloženého příspěvku",
+      "Embedded Post Title Description": "Popis nadpisu vloženého příspěvku",
+      "Embedded Post Content Main Area": "Tělo vloženého příspěvku",
+      "Embedded Post Field #1 - Heading": "Pole #1 vloženého příspěvku – nadpis",
+      "Embedded Post Field #1 Text": "Pole #1 vloženého příspěvku – text",
+      "Embedded Post Field #2 - Heading": "Pole #2 vloženého příspěvku → nadpis",
+      "Embedded Post Field #2 Text": "Pole #2 vloženého příspěvku – text",
+      "Inline": "Sloučení do jednoho řádku",
+      "Embedded Post Main Image": "Hlavní obrázek vloženého příspěvku",
+      "Main Image URL": "URL hlavního obrázku",
+      "Embedded Post Footer": "Patička vloženého příspěvku",
+      "Embedded Post Footer Icon URL": "URL ikony patičky vloženého příspěvku",
+      "Embedded Post Footer Text": "Text patičky vloženého příspěvku",
+      "Translation by": "Přeložil Danol"
+    }
+}
