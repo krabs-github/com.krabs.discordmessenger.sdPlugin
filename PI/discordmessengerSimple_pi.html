@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+        <meta name=apple-mobile-web-app-capable content=yes>
+        <meta name=apple-mobile-web-app-status-bar-style content=black>
+        <title>Discord Messenger - Simple Message</title>
+        <link rel="stylesheet" href="../resources/css/sdpi.css">
+    </head>
+    <body>
+        <div class="sdpi-wrapper">
+          <div class="sdpi-item" id="only_a_button">
+              <div class="sdpi-item-label"><b>➤</b></div>
+              <button onclick="openMeExternal('../resources/guides/guide_simple.html', 'Discord Messenger - Simple Message')" class="sdpi-item-value" value="Open Configuration in a Window">View Configuration Guide</button>
+          </div>
+          <div class="sdpi-item">
+              <details class="message caution">
+              <summary>Do NOT use the image area on the left. Set your image below:</summary>
+              </details>
+          </div>
+          <div class="sdpi-item" id="my_private_file_selector">
+              <div class="sdpi-item-label">Button Image</div>
+              <div class="sdpi-item-group file" id="filepickergroup">
+                  <input class="sdpi-item-value" type="file" id="vKrabs_BackgroundImage" accept=".jpg, .jpeg, .png">
+                  <label class="sdpi-file-info" for="vKrabs_BackgroundImage">no file...</label>
+                  <label class="sdpi-file-label" for="vKrabs_BackgroundImage">Choose file...</label>
+               </div>
+           </div>
+          <div class="sdpi-heading">Configuration</div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Discord Webhook URL</div>
+               <input id="vKrabs_DiscordWebHook" class="sdpi-item-value" type="text"
+                  placeholder="Enter your Discord Webhook URL" value=""
+                  required />
+            </div>
+            <div class="sdpi-heading">Posting User Information</div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Name of Posting User</div>
+               <input id="vKrabs_UserName" class="sdpi-item-value" type="text"
+                  placeholder="Name of Posting User" value=""
+                  required />
+            </div>
+            <div class="sdpi-item">
+               <div class="sdpi-item-label">Avatar URL for Posting User</div>
+               <input id="vKrabs_AvatarUrl" class="sdpi-item-value" type="text"
+                  placeholder="Avatar URL for Posting User" value=""
+                  required />
+            </div>
+            <div type="textarea" class="sdpi-item">
+                <div class="sdpi-item-label up20">Message from Posting User</div>
+                <div class="sdpi-item-value textarea">
+                  <textarea type="textarea" maxlength="2000" id="vKrabs_Discord_Message" class="three-lines"></textarea>
+                </div>
+            </div>
+            <div class="sdpi-item" id="vKrabs_TTS">
+                 <div class="sdpi-item-label">Text to Speech</div>
+                 <select class="sdpi-item-value select">
+                    <option value="false">Off</option>
+                    <option value="true">On</option>
+                 </select>
+            </div>
+        </div>
+
+        <div class="sdpi-info-label hidden" style="top: -1000;" value=""></div>
+        <script src="../resources/scripts/common.js"></script>
+        <script src="../resources/scripts/common_pi.js"></script>
+        <script src="../resources/scripts/index_pi.js"></script>
+        <script>
+          var vDestinationURL;
+          var vDestinationTitle;
+          function openMeExternal(vDestinationURL, vDestinationTitle) {
+              window.xtWindow = window.open(vDestinationURL, vDestinationTitle);
+              setTimeout(() => window.xtWindow.postMessage('initPropertyInspector', '*'), 1500);
+          }
+        </script>
+    </body>
+    </html>
