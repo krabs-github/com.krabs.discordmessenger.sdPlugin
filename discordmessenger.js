@@ -231,7 +231,7 @@ const twitch = {
         var vImageURL = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + this.settings[jsn.context].vKrabs_ChannelName + "-348x261.jpg";
         let vSelf = this
         function UpdateTwitchImage() {
-          twitch.settings[jsn.context] = Utils.getProp(jsn, 'payload.settings', {});
+          vSelf.settings[jsn.context] = Utils.getProp(jsn, 'payload.settings', {});
           vImageURL = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + vSelf.settings[jsn.context].vKrabs_ChannelName + "-348x261.jpg";
           var vResponseURL;
           var xhr = new XMLHttpRequest();
@@ -260,6 +260,7 @@ const twitch = {
             }
           };
         };
+        UpdateTwitchImage();
         let vKrabs_IntervalID = JSON.stringify(jsn.context);
         function startInterval(func, time) {
             vKrabs_Intervals[vKrabs_IntervalID] = setInterval(func, time);
