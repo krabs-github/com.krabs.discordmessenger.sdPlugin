@@ -76,7 +76,7 @@
                   required />
             </div>
             <div class="sdpi-item">
-               <div class="sdpi-item-label">Author Name Link</div>
+               <div class="sdpi-item-label">Author Name Link URL</div>
                <input id="vKrabs_Embed_AuthorUrl" class="sdpi-item-value" type="text"
                   placeholder="http://<yoururl>" value=""
                   required />
@@ -131,7 +131,7 @@
                 <div class="sdpi-item-value">
                     <div class="sdpi-item-child">
                         <input id="vKrabs_Embed_Field1_Inline" type="checkbox" value="on">
-                        <label for="vKrabs_Embed_Field1_Inline" class="sdpi-item-label"><span></span>true</label>
+                        <label for="vKrabs_Embed_Field1_Inline" class="sdpi-item-label"><span>true</span></label>
                     </div>
                 </div>
             </div>
@@ -180,9 +180,9 @@
                 </div>
             </div>
 
-            <div class="sdpi-heading"></div>
+            <div class="sdpi-heading">Support & Information</div>
             <div class="sdpi-item">
-                <details class="message info">
+                <details class="message info20">
                 <summary onclick="SDApi.common.openUrl('', 'https://www.krabs.me/streamdeck-plugins')">For more information or support go to click here: <a href="#">https://www.krabs.me/streamdeck-plugins</a></summary>
                 </details>
             </div>
@@ -198,6 +198,12 @@
           function openMeExternal(vDestinationURL, vDestinationTitle) {
               window.xtWindow = window.open(vDestinationURL, vDestinationTitle);
               setTimeout(() => window.xtWindow.postMessage('initPropertyInspector', '*'), 1500);
+          }
+          function CheckTimeBox() {
+            //var elm = document.getElementById('vKrabs_ShowTime');
+            if (vKrabs_Embed_Field1_Inline = true) {
+            document.getElementById("vKrabs_Embed_Field1_Inline").checked
+            }
           }
         </script>
     </body>
