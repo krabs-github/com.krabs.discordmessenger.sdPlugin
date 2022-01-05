@@ -1,32 +1,32 @@
 {
-  "Name": "Discord Messenger",
-  "Category": "Krabs - Discord Messenger",
-  "Description": "Discord Messenger allows you to send highly customizable formatted messages to your Discord Server. Templates for Simple Message, Custom Embed Message, Twitch Now Streaming, YouTube Video, & Twitter Post. Automated images & Information for some templates. Customization settings are dependent on template used: Name of Posting User, Avatar URL for Posting User, Message from Posting User, Enable/Disable Text to Speech, Embed Author Information, Author Icon Image URL, Author Name Link, Embedded Post Side Bar Color, Embedded Post Thumbnail URL, Embedded Post Title, Embedded Post Title Link, Embedded Post Title Description, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Option for Inline on/off, Main Image URL, Embedded Post Footer Icon URL, Embedded Post Footer Text, Twitch Channel Name, Stream Topic/Game, Twitter Username, URL of Twitter Post, YouTube Video URL, YouTube Channel Name, & Video Description. Please visit the URL below for images and a full description.",
+  "Name": "Discordメッセンジャー",
+  "Category": "Krabs - Discordメッセンジャー",
+  "Description": "DiscordメッセンジャーはフォーマットされたカスタマイズできるメッセージをDiscordサーバーに投稿できるプラグインです。テキストメッセージ、カスタム埋め込み投稿、ツイッチ配信開始、YouTube動画、そしてツイートのボタンがあります。ボタンによって情報と画像を自動入力があります。テンプレートによってカスタムの設定が異なります：通信するユーザ名、アップしたユーザーのアバターのリンク、コメントの文章、文字を読み上げ有効／無効、埋め込みのコメント内の作者の情報、作者のアイコンのイメージのリンク、作者のリンク、埋め込み投稿のサムネイル画像のリンク、埋め込み投稿のタイトル、埋め込み投稿のタイトルのリンク、埋め込み投稿のタイトルの記述、埋め込み投稿のフィールド１：項目、埋め込み投稿のフィールド１：文章、埋め込み投稿のフィールド２：項目、埋め込み投稿のフィールド２：文章、インライン型設定、メイン画像のリンク、埋め込み投稿のフッターのアイコンのリンク、埋め込み投稿のフッターの文章、Twitchチャンネル名、配信タイトルやゲーム名、Twitterのユーザー名、ツイートのリンク、Youtube動画のリンク、YouTubeチャンネル名、動画について。下記のリンクで説明と画像があります。",
 
     "com.krabs.discordmessenger.simple":
     {
-        "Name": "Discord Messenger - Simple Message",
-        "Tooltip": "Discord Messenger - Simple Message"
+        "Name": "Discordメッセンジャー - テキストメッセージ",
+        "Tooltip": "Discordメッセンジャー - テキストメッセージ"
     },
     "com.krabs.discordmessenger.custom":
     {
-        "Name": "Discord Messenger - Custom Embed",
-        "Tooltip": "Discord Messenger - Custom Embed"
+        "Name": "Discordメッセンジャー - カスタムフォーマット埋め込みメッセージ",
+        "Tooltip": "Discordメッセンジャー - カスタムフォーマット埋め込みメッセージ"
     },
     "com.krabs.discordmessenger.twitch":
     {
-        "Name": "Discord Messenger - Twitch Now Streaming",
-        "Tooltip": "Discord Messenger - Twitch Now Streaming"
+        "Name": "Discordメッセンジャー - ツイッチ配信開始メッセージ",
+        "Tooltip": "Discordメッセンジャー - ツイッチ配信開始メッセージ"
     },
     "com.krabs.discordmessenger.youtube":
     {
-        "Name": "Discord Messenger - YouTube Video",
-        "Tooltip": "Discord Messenger - YouTube Video"
+        "Name": "Discordメッセンジャー - YouTube動画",
+        "Tooltip": "Discordメッセンジャー - YouTube動画"
     },
     "com.krabs.discordmessenger.twitter":
     {
-        "Name": "Discord Messenger - Twitter Post",
-        "Tooltip": "Discord Messenger - Twitter Post"
+        "Name": "Discordメッセンジャー - ツイートのリンク",
+        "Tooltip": "Discordメッセンジャー　- ツイートのリンク"
     },
     "Localization": {
       "Configuration": "設定",
@@ -35,45 +35,47 @@
       "Choose file": "ファイルを選択...",
       "Discord Webhook URL": "DiscordのWebhookのリンク",
       "Enter your Discord Webhook URL": "DiscordのWebhookのリンクを入力する",
-      "Posting User Information": "アップするユーザーの情報",
-      "Name of Posting User": "通信するユーザ名",
+      "Posting User Information": "投稿者の情報",
+      "Name of Posting User": "投稿者の名前",
       "Tweet Information": "ツイートの情報",
       "Twitter Username": "Twitterのユーザー名",
       "Twitter Username (No @ Symbol)": "Twitterのユーザー名(@マーク除き)",
       "URL of Twitter Post": "ツイートのリンク",
-      "Text to Speech": "文字を読み上げ",
+      "Text to Speech": "文字の読み上げ",
       "Off": "無効",
       "On": "有効",
-      "Avatar URL for Posting User": "アップしたユーザーのアバターのリンク",
-      "Embedded Post Side Bar Color": "埋め込みツイートの背景色",
+      "Avatar URL for Posting User": "投稿者のアバターリンク",
+      "Embedded Post Side Bar Color": "埋め込み投稿の背景色",
       "Video Information": "動画の情報",
-      "YouTube Video URL": "YouTubeの動画のリンク",
+      "YouTube Video URL": "Youtube動画のリンク",
       "YouTube Channel Name": "YouTubeチャンネル名",
-      "Video Description (max. 40 chars)": "動画について(最大40文字以内)",
+      "Video Description (max. 40 chars)": "動画について(最大40文字)",
       "Stream Information": "配信の情報",
       "Twitch Channel Name": "Twitchチャンネル名",
-      "Stream Topic/Game (max. 40 chars)": "配信のタイトルやゲーム名(最大40文字以内)",
-      "Message from Posting User": "コメントの文章",
-      "Author Name": "Author Name",
-      "Embed Author Information": "Embed Author Information",
-      "Embedded Post Settings": "Embedded Post Settings",
-      "Title": "Title",
-      "Embedded Post Thumbnail URL": "Embedded Post Thumbnail URL",
-      "Embedded Post Title Content": "Embedded Post Title Content",
-      "Embedded Post Title": "Embedded Post Title",
-      "Embedded Post Title Link": "Embedded Post Title Link",
-      "Embedded Post Title Description": "Embedded Post Title Description",
-      "Embedded Post Content Main Area": "Embedded Post Content Main Area",
-      "Embedded Post Field #1 - Heading": "Embedded Post Field #1 - Heading",
-      "Embedded Post Field #1 Text": "Embedded Post Field #1 Text",
-      "Embedded Post Field #2 - Heading": "Embedded Post Field #2 - Heading",
-      "Embedded Post Field #2 Text": "Embedded Post Field #2 Text",
-      "Inline": "Inline",
-      "Embedded Post Main Image": "Embedded Post Main Image",
-      "Main Image URL": "Main Image URL",
-      "Embedded Post Footer": "Embedded Post Footer",
-      "Embedded Post Footer Icon URL": "Embedded Post Footer Icon URL",
-      "Embedded Post Footer Text": "Embedded Post Footer Text",
-      "Translation by": "Translation by Dannek Rose"
+      "Stream Topic/Game (max. 40 chars)": "配信タイトル/ゲーム名(最大40文字)",
+      "Message from Posting User": "投稿者からのメッセージ",
+      "Author Name": "作者",
+      "Author Icon Image URL": "作者のアイコンのイメージのリンク",
+      "Author Name Link URL": "作者のリンク",
+      "Embed Author Information": "埋め込み投稿の作者の情報",
+      "Embedded Post Settings": "埋め込み投稿の設定",
+      "Title": "タイトル",
+      "Embedded Post Thumbnail URL": "埋め込み投稿のサムネイル画像のリンク",
+      "Embedded Post Title Content": "埋め込み投稿タイトルの内容",
+      "Embedded Post Title": "埋め込み投稿のタイトル",
+      "Embedded Post Title Link": "埋め込み投稿のタイトルリンク",
+      "Embedded Post Title Description": "埋め込み投稿のタイトルの説明",
+      "Embedded Post Content Main Area": "埋め込み投稿内容のメインエリア",
+      "Embedded Post Field #1 - Heading": "埋め込み投稿欄#1：項目",
+      "Embedded Post Field #1 Text": "埋め込み投稿欄#1：文章",
+      "Embedded Post Field #2 - Heading": "埋め込み投稿欄#2：項目",
+      "Embedded Post Field #2 Text": "埋め込み投稿欄#2：文章",
+      "Inline": "インライン",
+      "Embedded Post Main Image": "埋め込み投稿のメイン画像",
+      "Main Image URL": "メイン画像のリンク",
+      "Embedded Post Footer": "埋め込み投稿のフッター",
+      "Embedded Post Footer Icon URL": "埋め込み投稿フッターアイコンのリンク",
+      "Embedded Post Footer Text": "埋め込み投稿フッター文章",
+      "Translation by": "日本語訳：Dannek Rose"
     }
 }

@@ -54,12 +54,14 @@
                   placeholder="https://twitter.com/<username>/status/1472242091224928265" value=""
                   required />
             </div>
-            <div class="sdpi-item" id="vKrabs_TTS">
-                 <div class="sdpi-item-label">Text to Speech</div>
-                 <select class="sdpi-item-value select">
-                    <option value="false">Off</option>
-                    <option value="true">On</option>
-                 </select>
+            <div type="checkbox" class="sdpi-item" id="single-check">
+                <div class="sdpi-item-label">Text to Speech</div>
+                <div class="sdpi-item-value">
+                    <div class="sdpi-item-child">
+                        <input id="vKrabs_TTS" type="checkbox" value="true">
+                        <label for="vKrabs_TTS" class="sdpi-item-label"><span></span>On</label>
+                    </div>
+                </div>
             </div>
 
             <div class="sdpi-heading">Support & Information</div>
