@@ -1,0 +1,83 @@
+{
+  "Name": "Messager Discord",
+  "Category": "Krabs - Discord Messenger",
+  "Description": "Discord Messenger allows you to send highly customizable formatted messages to your Discord Server. Templates for Simple Message, Custom Embed Message, Twitch Now Streaming, YouTube Video, & Twitter Post. Automated images & Information for some templates. Customization settings are dependent on template used: Name of Posting User, Avatar URL for Posting User, Message from Posting User, Enable/Disable Text to Speech, Embed Author Information, Author Icon Image URL, Author Name Link, Embedded Post Side Bar Color, Embedded Post Thumbnail URL, Embedded Post Title, Embedded Post Title Link, Embedded Post Title Description, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Option for Inline on/off, Main Image URL, Embedded Post Footer Icon URL, Embedded Post Footer Text, Twitch Channel Name, Stream Topic/Game, Twitter Username, URL of Twitter Post, YouTube Video URL, YouTube Channel Name, & Video Description. Please visit the URL below for images and a full description.",
+
+    "com.krabs.discordmessenger.simple":
+    {
+        "Name": "Message simple",
+        "Tooltip": "Message simple"
+    },
+    "com.krabs.discordmessenger.custom":
+    {
+        "Name": "Discord Messenger - Intégrer personnalisé",
+        "Tooltip": "Discord Messenger - Intégrer personnalisé"
+    },
+    "com.krabs.discordmessenger.twitch":
+    {
+        "Name": "Discord Messenger - Twitch maintenant en streaming",
+        "Tooltip": "Discord Messenger - Twitch maintenant en streaming"
+    },
+    "com.krabs.discordmessenger.youtube":
+    {
+        "Name": "Discord Messenger - Vidéo YouTube",
+        "Tooltip": "Discord Messenger - Vidéo YouTube"
+    },
+    "com.krabs.discordmessenger.twitter":
+    {
+        "Name": "Discord Messenger - Message Twitter",
+        "Tooltip": "Discord Messenger - Message Twitter"
+    },
+    "Localization": {
+      "Configuration": "Configuration",
+      "Background Image": "Image de fond",
+      "no file": "pas de fichier...",
+      "Choose file": "Choisir le fichier...",
+      "Discord Webhook URL": "URL du Webhook Discord",
+      "Enter your Discord Webhook URL": "ESaisissez l'URL de votre Webhook Discord",
+      "Posting User Information": "Publication d'informations sur l'utilisateur",
+      "Name of Posting User": "Nom de l'utilisateur de publication",
+      "Tweet Information": "Informations sur les tweets",
+      "Twitter Username": "Nom d'utilisateur Twitter",
+      "Twitter Username (No @ Symbol)": "Nom d'utilisateur Twitter (Symbole Non @)",
+      "URL of Twitter Post": "URL de la publication Twitter",
+      "Text to Speech": "Texte pour parler",
+      "Off": "Désactivé",
+      "On": "Au",
+      "Avatar URL for Posting User": "URL d'avatar pour l'utilisateur de publication",
+      "Embedded Post Side Bar Color": "Couleur de la barre latérale du poteau intégré",
+      "Video Information": "Informations sur la vidéo",
+      "YouTube Video URL": "URL de la vidéo YouTube",
+      "YouTube Channel Name": "Nom de la chaîne YouTube",
+      "Video Description (max. 40 chars)": "Description de la vidéo (40 caractères max.)",
+      "Stream Information": "Informations sur le flux",
+      "Twitch Channel Name": "Nom de la chaîne Twitch",
+      "Stream Topic/Game (max. 40 chars)": "Sujet/jeu de flux (max. 40 caractères)",
+      "Message from Posting User": "Message de l'utilisateur publiant",
+      "Author Name": "Nom de l'auteur",
+      "Author Icon Image Url": "URL de l'image de l'icône de l'auteur",
+      "Author Name Link URL": "URL du lien du nom de l'auteur",
+      "Embed Author Information": "Intégrer les informations sur l'auteur",
+      "Embedded Post Settings": "Paramètres de publication intégrés",
+      "Title": "Titre",
+      "Embedded Post Thumbnail URL": "URL de la miniature de publication intégrée",
+      "Embedded Post Title Content": "Contenu du titre du message intégré",
+      "Embedded Post Title": "Titre du message intégré",
+      "Embedded Post Title Link": "Lien de titre de message intégré",
+      "Embedded Post Title Description": "Description du titre du poste intégré",
+      "Embedded Post Content Main Area": "Zone principale du contenu de la publication intégrée",
+      "Embedded Post Field #1 - Heading": "Champ de message intégré n° 1 - En-tête",
+      "Embedded Post Field #1 Text": "Texte du champ de publication n° 1 intégré",
+      "Embedded Post Field #2 - Heading": "Champ de message intégré n° 2 - En-tête",
+      "Embedded Post Field #2 Text": "Texte du champ de publication n° 2 intégré",
+      "Inline": "En ligne",
+      "Embedded Post Main Image": "Image principale de la publication intégrée",
+      "Main Image URL": "URL de l'image principale",
+      "Embedded Post Footer": "Pied de page de publication intégré",
+      "Embedded Post Footer Icon URL": "URL de l'icône de pied de page de publication intégrée",
+      "Embedded Post Footer Text": "Texte de pied de page de publication intégré",
+      "Do NOT use the image area on the left. Set your image below": "N'utilisez PAS la zone d'image sur la gauche. Définissez votre image ci-dessous",
+      "View Configuration Guide": "Afficher le guide de configurationAfficher le guide de configuration",
+      "Do NOT use the image area on the left. It will interfere with this plugin.": "N'utilisez PAS la zone d'image sur la gauche. Cela va interférer avec ce plugin."
+    }
+}

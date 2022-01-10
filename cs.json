@@ -55,6 +55,8 @@
       "Stream Topic/Game (max. 40 chars)": "Popis streamu/jméno hry (max. 40 znaků)",
       "Message from Posting User": "Zpráva od odesílatele",
       "Author Name": "Jméno autora",
+      "Author Icon Image Url": "Adresa URL obrázku ikony autora",
+      "Author Name Link URL": "Jméno autora URL odkazu",
       "Embed Author Information": "Informace o autorovi vloženého příspěvku",
       "Embedded Post Settings": "Nastavení vloženého příspěvku",
       "Title": "Nadpis",
@@ -74,6 +76,9 @@
       "Embedded Post Footer": "Patička vloženého příspěvku",
       "Embedded Post Footer Icon URL": "URL ikony patičky vloženého příspěvku",
       "Embedded Post Footer Text": "Text patičky vloženého příspěvku",
+      "Do NOT use the image area on the left. Set your image below": "NEPOUŽÍVEJTE oblast obrázku vlevo. Nastavte svůj obrázek níže",
+      "View Configuration Guide": "Zobrazit Průvodce konfigurací",
+      "Do NOT use the image area on the left. It will interfere with this plugin.": "Do NOT use the image area on the left. It will interfere with this plugin.",
       "Translation by": "Přeložil Danol"
     }
 }

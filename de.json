@@ -1,0 +1,83 @@
+{
+  "Name": "Discord Bote",
+  "Category": "Krabs - Discord Bote",
+  "Description": "Mit Discord Bote können Sie hochgradig anpassbare formatierte Nachrichten an Ihren Discord-Server senden. Vorlagen für einfache Nachrichten, benutzerdefinierte eingebettete Nachrichten, Twitch Now-Streaming, YouTube-Videos und Twitter-Beiträge. Automatisierte Bilder und Informationen für einige Vorlagen. Die Anpassungseinstellungen hängen von der verwendeten Vorlage ab: Name des Beitragenden Benutzers, Avatar-URL für den Beitragenden Benutzer, Nachricht vom Beitragenden Benutzer, Aktivieren/Deaktivieren von Text-to-Speech, Einbetten von Autoreninformationen, Autorensymbol-Bild-URL, Autornamenslink, Farbe der eingebetteten Beitragsseitenleiste, Eingebettete Beitrags-Thumbnail-URL, Eingebetteter Beitragstitel, Eingebetteter Beitragstitel-Link, Eingebettete Beitragstitelbeschreibung, Eingebettetes Beitragsfeld Nr. 1 – Überschrift, Eingebetteter Beitragsfeld Nr. 1 Text, Eingebettetes Beitragsfeld Nr. 1 – Überschrift, Eingebetteter Beitragsfeld Nr. 1 Text, Option für Inline ein/aus, Hauptbild-URL, eingebettete Fußzeilensymbol-URL, eingebetteter Fußzeilentext, Twitch-Kanalname, Streamthema/Spiel, Twitter-Benutzername, URL von Twitter-Post, YouTube-Video-URL, YouTube-Kanalname und Videobeschreibung. Bitte besuchen Sie die folgende URL für Bilder und eine vollständige Beschreibung.",
+
+    "com.krabs.discordmessenger.simple":
+    {
+        "Name": "Discord Bote - Simple Botschaft",
+        "Tooltip": "Discord Bote - Simple Botschaft"
+    },
+    "com.krabs.discordmessenger.custom":
+    {
+        "Name": "Discord Bote - maßgeschneidert einbetten",
+        "Tooltip": "Discord Bote - maßgeschneidert einbetten"
+    },
+    "com.krabs.discordmessenger.twitch":
+    {
+        "Name": "Discord Bote - Twitch Jetzt streamen",
+        "Tooltip": "Discord Bote - Twitch Jetzt streamen"
+    },
+    "com.krabs.discordmessenger.youtube":
+    {
+        "Name": "Discord Bote - YouTube Video",
+        "Tooltip": "Discord Bote - YouTube Video"
+    },
+    "com.krabs.discordmessenger.twitter":
+    {
+        "Name": "Discord Bote - Twitter Post",
+        "Tooltip": "Discord Bote - Twitter Post"
+    },
+    "Localization": {
+      "Configuration": "Konfiguration",
+      "Background Image": "Hintergrundbild",
+      "no file": "keine Datei...",
+      "Choose file": "Datei wählen...",
+      "Discord Webhook URL": "Discord Webhook URL",
+      "Enter your Discord Webhook URL": "Geben Sie Ihr Discord Webhook URL",
+      "Posting User Information": "Benutzerinformationen veröffentlichen",
+      "Name of Posting User": "Name des Beitragsbenutzers",
+      "Tweet Information": "Tweet Informationen",
+      "Twitter Username": "Twitter Nutzername",
+      "Twitter Username (No @ Symbol)": "Twitter Nutzername (Kein @ Symbol)",
+      "URL of Twitter Post": "URL des Twitter-Beitrags",
+      "Text to Speech": "Text zu Sprache",
+      "Off": "aus",
+      "On": "Auf",
+      "Avatar URL for Posting User": "Avatar URL für Beitragsbenutzer",
+      "Embedded Post Side Bar Color": "Farbe der eingebetteten Pfosten-Seitenleiste",
+      "Video Information": "Videoinformationen",
+      "YouTube Video URL": "YouTube Video URL",
+      "YouTube Channel Name": "YouTube Kanalname",
+      "Video Description (max. 40 chars)": "Videobeschreibung (maximal 40 Zeichen)",
+      "Stream Information": "Stream Informationen",
+      "Twitch Channel Name": "Twitch Kanalname",
+      "Stream Topic/Game (max. 40 chars)": "Thema/Spiel streamen (maximal 40 Zeichen)",
+      "Botschaft from Posting User": "Botschaft von Posting-Benutzer",
+      "Author Name": "Autorenname",
+      "Author Icon Image Url": "Urheber Symbol Bild URL",
+      "Author Name Link URL": "Autorenname Link URL",
+      "Embed Author Information": "Autoreninformationen einbetten",
+      "Embedded Post Settings": "Eingebettete Post Einstellungen",
+      "Title": "Titel",
+      "Embedded Post Thumbnail URL": "Eingebettete Thumbnail posten URL",
+      "Embedded Post Title Content": "Inhalt des eingebetteten Beitragstitels",
+      "Embedded Post Title": "Eingebetteter Beitragstitel",
+      "Embedded Post Title Link": "Eingebetteter Beitragstitel Link",
+      "Embedded Post Title Description": "Beschreibung des eingebetteten Beitragstitels",
+      "Embedded Post Content Main Area": "Hauptbereich des eingebetteten Beitragsinhalts",
+      "Embedded Post Field #1 - Heading": "Eingebettetes Beitragsfeld Nr. 1 – Überschrift",
+      "Embedded Post Field #1 Text": "Eingebetteter Text in Post-Feld Nr. 1",
+      "Embedded Post Field #2 - Heading": "Eingebettetes Beitragsfeld Nr. 2 – Überschrift",
+      "Embedded Post Field #2 Text": "Eingebetteter Text in Post-Feld Nr. 2",
+      "Inline": "Im Einklang",
+      "Embedded Post Main Image": "Eingebettetes Hauptbild des Beitrags",
+      "Main Image URL": "Hauptbild URL",
+      "Embedded Post Footer": "Eingebettete Beitragsfußzeile",
+      "Embedded Post Footer Icon URL": "URL für eingebettetes Post Fußzeilensymbol",
+      "Embedded Post Footer Text": "Eingebetteter Beitrags Fußzeilentext",
+      "Do NOT use the image area on the left. Set your image below": "Verwenden Sie NICHT den Bildbereich auf der linken Seite. Stellen Sie Ihr Bild unten ein",
+      "View Configuration Guide": "Konfigurationsleitfaden anzeigen",
+      "Do NOT use the image area on the left. It will interfere with this plugin.": "Verwenden Sie NICHT den Bildbereich auf der linken Seite. Es wird dieses Plugin stören."
+    }
+}
