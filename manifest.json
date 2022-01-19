@@ -94,7 +94,7 @@
 
     "SDKVersion": 2,
     "Author": "Krabs",
-    "Category": "Krabs - Discord Messenger",
+    "Category": "Krabs - Discord",
     "CategoryIcon": "resources/images/categoryIcon",
     "CodePath": "discordmessenger.html",
     "Description": "Discord Messenger allows you to send highly customizable formatted messages to your Discord Server. Templates for Simple Message, Custom Embed Message, Twitch Now Streaming, YouTube Video, & Twitter Post. Automated images & Information for some templates. Customization examples depending on template used: Name of Posting User, Avatar URL for Posting User, Message from Posting User, Enable/Disable Text to Speech, Embed Author Information, Author Icon Image URL, Author Name Link, Embedded Post Side Bar Color, Embedded Post Thumbnail URL, Embedded Post Title, Embedded Post Title Link, Embedded Post Title Description, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Embedded Post Field #1 - Heading, Embedded Post Field #1 Text, Option for Inline on/off, Main Image URL, Embedded Post Footer Icon URL, Embedded Post Footer Text, Twitch Channel Name, Stream Topic/Game, Twitter Username, URL of Twitter Post, YouTube Video URL, YouTube Channel Name, & Video Description. Please visit the URL below for images and a full description.",
